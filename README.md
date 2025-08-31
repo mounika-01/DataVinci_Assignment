@@ -59,22 +59,39 @@ A step-by-step demonstration covers:
 ##  Project Structure
 
 DataVinci_Assignment/
+
 │── public/
+
 │── src/
+
 │ ├── components/
+
 │ │ ├── Navbar.jsx
+
 │ │ ├── Layout.jsx
+
 │ │ ├── CheckboxTree.jsx
+
 │ │ └── CheckboxItem.jsx
+
 │ ├── styles/
+
 │ │ ├── layout.css
+
 │ │ └── checkbox.css
+
 │ ├── App.jsx
+
 │ └── main.jsx
+
 │── .gitignore
+
 │── package.json
+
 │── package-lock.json
+
 │── vite.config.js
+
 │── README.md
 
 
