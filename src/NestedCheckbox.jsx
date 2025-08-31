@@ -74,38 +74,37 @@ export default function NestedCheckbox({ tree, setSelectedCount }) {
 
     updateSets(newChecked, newIndeterminate);
   }
-
   function TreeNode({ id, level = 0 }) {
-    const ref = useRef(null);
-    const isChecked = checkedSet.has(id);
-    const isIndeterminate = indeterminateSet.has(id);
-    const hasChildren = (children[id] || []).length > 0;
+  const ref = useRef(null);
+  const isChecked = checkedSet.has(id);
+  const isIndeterminate = indeterminateSet.has(id);
+  const hasChildren = (children[id] || []).length > 0;
 
-    useEffect(() => {
-      if (ref.current) ref.current.indeterminate = isIndeterminate;
-    }, [isIndeterminate]);
+  useEffect(() => {
+    if (ref.current) ref.current.indeterminate = isIndeterminate;
+  }, [isIndeterminate]);
 
-    return (
-      <div className="tree-node" style={{ marginLeft: level * 25 }}>
-        <label className="toggle-label">
-          <input
-            ref={ref}
-            type="checkbox"
-            checked={isChecked}
-            onChange={e => toggleNode(id, e.target.checked)}
-            className="toggle-checkbox"
-          />
-          <span className="toggle-slider"></span>
-          {nodes[id].label}
-        </label>
+  return (
+    <div className="tree-node" style={{ marginLeft: level * 25 }}>
+      <label>
+        <input
+          ref={ref}
+          type="checkbox"
+          checked={isChecked}
+          onChange={e => toggleNode(id, e.target.checked)}
+          className="checkbox"
+        />
+        <span className="checkbox-label">{nodes[id].label}</span>
+      </label>
 
-        {hasChildren &&
-          children[id].map(cid => (
-            <TreeNode key={cid} id={cid} level={level + 1} />
-          ))}
-      </div>
-    );
-  }
+      {hasChildren &&
+        children[id].map(cid => (
+          <TreeNode key={cid} id={cid} level={level + 1} />
+        ))}
+    </div>
+  );
+}
+
 
   return <TreeNode id={tree.id} />;
 }
