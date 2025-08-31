@@ -113,9 +113,6 @@ Step 3: Start the App
 
 npm run dev
 
-
-The app will be accessible at http://localhost:5000
-
 Testing & Verification
 
 Responsive Behavior
