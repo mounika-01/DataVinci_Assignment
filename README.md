@@ -1,101 +1,44 @@
-# DataVinci Assignment – Responsive Layout & Nested Checkbox Component
+# DataVinci Assignment
 
-This repository contains a React.js project (bootstrapped with Vite) that implements:
-
-1. A fully **responsive layout** (Desktop & Mobile) based on the provided Figma design.  
-
-2. A **nested checkbox component** with full parent–child selection logic and indeterminate states.
-
-It also includes a Loom walkthrough video demonstrating these implementations.
+This is a **Frontend Developer Assignment** project built as part of the DataVinci hiring process.  
+The project demonstrates responsive UI design, accessibility best practices, and deployment using **Vercel**.
 
 ---
 
-##  Features
-
-### 1. Responsive Layout
-
-- Built with **mobile-first design principles** using CSS **Flexbox** and **Grid**.
-
-- Adapts dynamically:
-
-  - **Desktop (≥ 1024px)** – Multi-column layout, full navigation bar.
-
-  - **Tablet / Mobile (< 768px)** – Single-column layout, collapsible hamburger menu.
-
-- Ensures pixel-perfect fidelity with Figma (spacing, typography, colors).
-
-- Accessibility compliant: proper color contrast, minimum font sizes, and full keyboard navigation.
-
-### 2. Nested Checkbox Component
-
-- Hierarchical structure:
-
-  - **Select All** toggles all categories and individual items.
-
-  - **Parent Categories** (e.g., Fruits, Vegetables) control their child items.
-
-  - **Children** update parent state to checked, unchecked, or indeterminate.
-
-- Implements bidirectional state propagation:
-
-  - **Downwards**: Parent → Children.
-
-  - **Upwards**: Children → Parent reflects partial or full selection.
-
-### 3. Loom Walkthrough Video
-
-A step-by-step demonstration covers:
-
-1. **Introduction** – Developer overview.
-
-2. **Code Walkthrough** – Architecture and logic for layout and checkbox functionality.
-
-3. **Live Demo** – Desktop and mobile responsiveness, plus checkbox behavior.
-
-4. **Conclusion** – Summary and potential enhancements.
+## 🚀 Features
+- Fully responsive design across devices  
+- Light and Dark mode toggle  
+- Accessible HTML structure with ARIA support  
+- Built using modern **React.js** and **Tailwind CSS**  
+- Deployed on **Vercel** for fast and reliable hosting  
 
 ---
 
-##  Project Structure
+## 🛠️ Tech Stack
+- **React.js** – Frontend library  
+- **Tailwind CSS** – Styling framework  
+- **JavaScript (ES6+)**  
+- **Vercel** – Deployment  
 
+---
+
+## 📂 Project Structure
 DataVinci_Assignment/
-
-│── public/
-
-│── src/
-
-│ ├── components/
-
-│ │ ├── Navbar.jsx
-
-│ │ ├── Layout.jsx
-
-│ │ ├── CheckboxTree.jsx
-
-│ │ └── CheckboxItem.jsx
-
-│ ├── styles/
-
-│ │ ├── layout.css
-
-│ │ └── checkbox.css
-
-│ ├── App.jsx
-
-│ └── main.jsx
-
-│── .gitignore
-
-│── package.json
-
-│── package-lock.json
-
-│── vite.config.js
-
-│── README.md
+├── public/ # Static files
+├── src/ # React components and styles
+│ ├── components/ # Reusable UI components
+│ ├── App.js # Main app entry
+│ └── index.js # React DOM entry point
+├── package.json # Dependencies
+└── README.md # Documentation
 
 
 ---
 
-##  Getting Started
+## ⚡ Getting Started
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/mounika-01/DataVinci_Assignment.git
+cd DataVinci_Assignment
 
